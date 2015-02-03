@@ -35,7 +35,7 @@ public class Arithmetic{
     double socksTax, glassesTax, envelopesTax;
     double socksWithTax, glassesWithTax, envelopesWithTax;
     double beforeTax, totalTax, totalCost;
-    double roundedTotal;
+    double totalCostRounded;
     
     costSocks=nSocks*socksCost$;
     socksTax=costSocks*taxPercent;
@@ -54,8 +54,8 @@ public class Arithmetic{
     
     totalCost=totalTax+beforeTax;
     
-    int totalCostRounded = (int) totalCost;
-    roundedTotal = totalCostRounded*100/100.0;
+    int roundedTotal= (int) totalCost;
+    totalCostRounded=totalCost*100/100.00;
     
 //  print
 
