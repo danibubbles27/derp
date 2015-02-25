@@ -13,62 +13,59 @@ public class ToHex {
         
 //  declare scanner
     Scanner myScanner = new Scanner (System.in);
-
+//  user input
     System.out.println(" Please enter three numbers representing RGB values: ");
-    int userInput1, userInput2, userInput3 = myScanner.nextInt();
-    int value1, value2, value3 = -1;
+    int userInput = myScanner.nextInt();
     
 //  red pixel check if integer and within range
     if (myScanner.hasNextInt()) {
-         value1 = userInput1;
     }//end if statement
     else{
         System.out.println("Sorry, your input must consist of integers. ");
-        return;
     }//end else statement
-    if ( userInput1 <= 0 || userInput1 >= 255 ){
+    int value1 = userInput;
+    if ( userInput <= 0 || userInput >= 255 ){
         System.out.println(" Sorry, you must enter values between 0-255. ");
-        return;
     }//end if statement
     else{
         System.out.println(" Sorry, you must enter values between 0-255. ");
+        return;
     }//end else statement
     
 //  green pixel check if integer and within range
     if (myScanner.hasNextInt()) {
-        value2 = userInput2;
     }//end if statement
     else{
         System.out.println("Sorry, your input must consist of integers. ");
-        return;
     }//end else statement
-    if ( userInput2 <= 0 || userInput2 >= 255 ){
+    int value2 = userInput;
+    if ( userInput <= 0 || userInput >= 255 ){
         System.out.println(" Sorry, you must enter values between 0-255. ");
-        return;
     }//end if statement
     else{
         System.out.println(" Sorry, you must enter values between 0-255. ");
+        return;
     }//end else statement
     
 //  blue pixel check if integer and within range
     if (myScanner.hasNextInt()) {
-        value3 = userInput3;
     }//end if statement
     else{
         System.out.println("Sorry, your input must consist of integers. ");
-        return;
     }//end else statement
-    if ( userInput3 <= 0 || userInput3 >= 255 ){
+    int value3 = userInput;
+    if ( userInput <= 0 || userInput >= 255 ){
         System.out.println(" Sorry, you must enter values between 0-255. ");
-        return;
     }//end if statement
     else {
         System.out.println(" Sorry, you must enter values between 0-255. ");
+        return;
     }//end else statement
-    
+
     String output = "";
     int remainder1, remainder2, remainder3, remainder4, remainder5, remainder6;
-    
+
+//  declare hexadecimal variables
     remainder1 = value1 / 16;
     remainder2 = value1 % 16;
     remainder3 = value2 / 16;
