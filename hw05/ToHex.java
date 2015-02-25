@@ -13,9 +13,18 @@ public class ToHex {
         
 //  declare scanner
     Scanner myScanner = new Scanner (System.in);
+
+//  declare decimal values 
+    int value1;
+    int value2;
+    int value3;
+
 //  user input
-    System.out.println(" Please enter three numbers representing RGB values: ");
+    System.out.print(" Please enter three numbers representing RGB values: ");
     int userInput = myScanner.nextInt();
+    value1 = userInput;
+    value2 = userInput;
+    value3 = userInput;
     
 //  red pixel check if integer and within range
     if (myScanner.hasNextInt()) {
@@ -23,7 +32,6 @@ public class ToHex {
     else{
         System.out.println("Sorry, your input must consist of integers. ");
     }//end else statement
-    int value1 = userInput;
     if ( userInput <= 0 || userInput >= 255 ){
         System.out.println(" Sorry, you must enter values between 0-255. ");
     }//end if statement
@@ -38,7 +46,6 @@ public class ToHex {
     else{
         System.out.println("Sorry, your input must consist of integers. ");
     }//end else statement
-    int value2 = userInput;
     if ( userInput <= 0 || userInput >= 255 ){
         System.out.println(" Sorry, you must enter values between 0-255. ");
     }//end if statement
@@ -53,7 +60,6 @@ public class ToHex {
     else{
         System.out.println("Sorry, your input must consist of integers. ");
     }//end else statement
-    int value3 = userInput;
     if ( userInput <= 0 || userInput >= 255 ){
         System.out.println(" Sorry, you must enter values between 0-255. ");
     }//end if statement
