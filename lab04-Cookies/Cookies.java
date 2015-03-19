@@ -31,7 +31,6 @@
 //  prompt for # of people
     System.out.print(
             " Enter the number of people: ");
-    
     if (myScanner.hasNextInt()){
     int nPeople = myScanner.nextInt();
     }
@@ -45,8 +44,7 @@
         return;
     }
 //  prompt number of cookies buying
-     System.out.println(" Enter the number of cookies you are planning to buy: ");
-   
+    System.out.println(" Enter the number of cookies you are planning to buy: ");
     if (myScanner.hasNextInt()){
     int buyCookies = myScanner.nextInt();
     }
@@ -88,6 +86,6 @@
         moreCookies = nCookies*nPeople - buyCookies;
         System.out.print(
             "You will not have enough cookies. You need to buy at least "+moreCookies+" more.");
-    } 
     }
     }
+}

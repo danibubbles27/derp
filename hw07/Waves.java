@@ -27,303 +27,81 @@ public class Waves {
     }//end while loop
     
 //  create waves of numbers
+
+//  FOR LOOP
     System.out.println(" FOR LOOP ");
 
     for (int numberWaves = 1; numberWaves <= counter; numberWaves++){
-        
+        if (numberWaves %= 0){
+            for (int countNumber = 1; countNumber <= numberWaves; countNumber++){
+                waveSign += numberWaves;
+                System.out.println(waveSign);
+            }//end for loop
+        }//end if statement
+        else{
+            for (int countNumber = numberWaves; countNumber >= 1; countNumber--){
+                for (int depth = 1; depth <= countNumber; depth++){
+                    System.out.print(numberWaves);
+                }//end for loop
+                System.out.println(" ");
+            }//end for loop
+        }//end else statement
     }//end for loop
     
-//  
+//  WHILE LOOP
+    System.out.println(" WHILE LOOP ");
+    int numberWaves = 0;
 
-    }//end main method
+    while (numberWaves <= counter){
+        if (numberWaves %= 0){
+            int countNumber = 1;
+            while (countNumber <= numberWaves){
+                waveSign += numberWaves;
+                System.out.println(waveSign);
+            }//end while loop
+            countNumber++;
+        }//end if statement
+        else{
+            int countNumber = numberWaves;
+            while (countNumber >= 1){
+                int depth = 0;
+                while (depth <= countNumber){
+                    System.out.print(numberWaves);
+                    depth++;
+                }//end while loop
+                System.out.println(" ");
+                countNumber--;
+            }//end while loop
+        }//end else statement
+        numberWaves++;
+    }//end while loop
     
+// DO-WHILE LOOP
+    System.out.println(" DO-WHILE LOOP ");
+    
+    do {
+        if (numberWaves %=0){
+            waveSign = " ";
+            int countNumber = 0;
+            do{
+                waveSign += numberWaves;
+                System.out.println(waveSign);
+                waveSign++;
+            } while (countNumber <= numberWaves);//end do while loop
+        }//end if statement
+        else{
+            int countNumber = numberWaves;
+            do{
+                int depth = 0;
+                do{
+                    System.out.print(numberWaves);
+                    depth++;
+                } while (depth <= countNumber);//end do-while loop
+                System.out.println(" ");
+                countNumber--;
+            }while (countNumber >= 1);//end do-while loop
+        }//end else statement
+        numberWaves++;
+    }while (numberWaves <= counter);//end do-while loop
+    }//end main method
 }//end class
-
-        int number = -1;
-
-        
-
-        // Declare the string that will be printed
-
-        String waveChar;
-            number = myScanner.nextInt();
-
-            // If the input is in the correct range, break out of the loop
-
-            if (number >= 1 && number <= 30) {
-
-                break;
-
-            }
-
-            else {
-
-                System.out.println("Improper input");
-
-            }
-
-        }
-
-        // New line again to space out the waves
-
-        System.out.println("");
-
-        
-
-        // Run the for loop wave as a for loop
-
-        System.out.println("FOR LOOP:");
-
-        // Run the loop (i.e. each rise or fall of the wave) the amount of times equal to the input
-
-        for (int waveCount = 1; waveCount <= number; waveCount++) {
-
-            // Going up on even waves:
-
-            if (waveCount%2 == 0) {
-
-                // Initialize/reset the string to be printed
-
-                waveChar = "";
-
-                for (int charCount = 1; charCount <= waveCount; charCount++) {
-
-                    // Add a new character to the string
-
-                    waveChar += waveCount;
-
-                    // Print out the string and move to the next line
-
-                    System.out.println(waveChar);
-
-                }
-
-            }
-
-            // Going down on odd waves:
-
-            else {
-
-                // The purpose of this loop is merely to move to a new line once the inner loop is finished running
-
-                for (int charCount = waveCount; charCount >= 1; charCount--) {
-
-                    // For each line of the wave, add that many waveChars before moving to a new line
-
-                    for (int length = 1; length <= charCount; length++) {
-
-                        // Print out the number
-
-                        System.out.print(waveCount);
-
-                    }
-
-                    // Move to a new line once all chars have been printed
-
-                    System.out.println("");
-
-                }
-
-            }
-
-        }
-
-        
-
-        // New line again to space out the waves
-
-        System.out.println("");
-
-        
-
-        // Run the loop wave as a while loop
-
-        System.out.println("WHILE LOOP:");
-
-        // Declare and initialize the wave count for this loop
-
-        int waveCount = 1;
-
-        // Run the loop for the amount of times equal to the input
-
-        while (waveCount <= number) {
-
-            // Going up on even waves:
-
-            if (waveCount%2 == 0) {
-
-                // Initialize/reset the string to be printed
-
-                waveChar = "";
-
-                // Initialize your character counter
-
-                int charCount = 1;
-
-                while (charCount <= waveCount) {
-
-                    // Add a new character to the string
-
-                    waveChar += waveCount;
-
-                    // Print out the string and move to the next line
-
-                    System.out.println(waveChar);
-
-                    // Increase the charCount
-
-                    charCount++;
-
-                }
-
-            }
-
-            // Going down on odd waves:
-
-            else {
-
-                // Initialize your character counter
-
-                int charCount = waveCount;
-
-                // The purpose of this loop is merely to move to a new line once the inner loop is finished running
-
-                while (charCount >= 1) {
-
-                    // Initialize your length variable
-
-                    int length = 1;
-
-                    // For each line of the wave, at that many waveChars before moving to a new line
-
-                    while (length <= charCount) {
-
-                        // Print out the number for each time the loop runs
-
-                        System.out.print(waveCount);
-
-                        // Increase the length variable
-
-                        length++;
-
-                    }
-
-                    // Move to a new line once all the chars have been printed
-
-                    System.out.println("");
-
-                    // Decrease the character count by 1
-
-                    charCount--;
-
-                }
-
-            }
-
-            // Increase the waveCount
-
-            waveCount++;
-
-        }
-
-        
-
-        // New line again to space out the waves
-
-        System.out.println("");
-
-        
-
-        // Run the loop wave as a while loop
-
-        System.out.println("DO-WHILE LOOP:");
-
-        // Declare and initialize the wave count for this loop
-
-        waveCount = 1;
-
-        // Run the loop for the amount of times equal to the input
-
-        do {
-
-            // Going up on even waves:
-
-            if (waveCount%2 == 0) {
-
-                // Initialize/reset the string to be printed
-
-                waveChar = "";
-
-                // Initialize your character counter
-
-                int charCount = 1;
-
-                do {
-
-                    // Add a new character to the string
-
-                    waveChar += waveCount;
-
-                    // Print out the string and move to the next line
-
-                    System.out.println(waveChar);
-
-                    // Increase the charCount
-
-                    charCount++;
-
-                } while (charCount <= (waveCount));
-
-            }
-
-            // Going down on odd waves:
-
-            else {
-
-                // Initialize your character counter
-
-                int charCount = waveCount;
-
-                // The purpose of this loop is merely to move to a new line once the inner loop is finished running
-
-                do {
-
-                    // Initialize your length variable
-
-                    int length = 1;
-
-                    // For each line of the wave, at that many waveChars before moving to a new line
-
-                    do {
-
-                        // Print out the number for each time the loop runs
-
-                        System.out.print(waveCount);
-
-                        // Increase the length variable
-
-                        length++;
-
-                    } while (length <= (charCount));
-
-                    // Move to a new line once all the chars have been printed
-
-                    System.out.println("");
-
-                    // Decrease the character count by 1
-
-                    charCount--;
-
-                } while (charCount >= 1);
-
-            }
-
-            // Increase the waveCount
-
-            waveCount++;
-
-        } while (waveCount <= (number));
-
-    }
-
-}
